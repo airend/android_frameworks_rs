@@ -14,6 +14,12 @@
 # limitations under the License.
 #
 
+$(LOCAL_2ND_ARCH_VAR_PREFIX)RS_TRIPLE := \
+    $($(LOCAL_2ND_ARCH_VAR_PREFIX)RS_TRIPLE:armv7-%=renderscript32-%)
+
+$(LOCAL_2ND_ARCH_VAR_PREFIX)RS_TRIPLE := \
+    $($(LOCAL_2ND_ARCH_VAR_PREFIX)RS_TRIPLE:aarch64-%=renderscript64-%)
+
 ifndef BCC_RS_TRIPLE
 BCC_RS_TRIPLE := $($(LOCAL_2ND_ARCH_VAR_PREFIX)RS_TRIPLE)
 endif
